@@ -12,7 +12,7 @@ void show_food(char(*food)[10], int(*ex_date)[3], int food_num) {
     printf("show food\n"); // delete
 }
 
-void show_expired_food(char(*food)[10], int(*ex_date)[3], int food_number, int *date) {
+void show_expired_food(char(*food)[10], int(*ex_date)[3], int food_num, int *date) {
     /*** Your Code Here ***/
     printf("show expired food\n"); // delete
 }
@@ -22,7 +22,7 @@ void main() {
     char food[max_food][10]; // 식재료 개수 5개, 글자 수 10자 제한
     int expiration_date[max_food][3]; // 유통기한 개수 5개, year, month, date
     int food_num = 0; // 현재 식재료 개수
-    int date[3] = { 2020, 5, 9 }; // 오늘 날짜
+    int date[3] = { 2020, 3, 15 }; // 오늘 날짜
 
     printf("<< 자취생 냉장고 관리 프로그램 >> \n\n");
 
