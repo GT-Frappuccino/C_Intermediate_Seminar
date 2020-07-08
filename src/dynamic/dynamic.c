@@ -43,7 +43,7 @@ void main() {
     int date[3] = { 2020, 3, 15 }; // 오늘 날짜
     Foods foods[5];
     for (int i = 0; i < 5; ++i) {
-        foods[i].pfood = (Foods*) malloc(sizeof(Food) * 2);
+        foods[i].pfood = (Food*) malloc(sizeof(Food) * 2);
         foods[i].capacity = 2;
         foods[i].Foodnum = 0;
     }
