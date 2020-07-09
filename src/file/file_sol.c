@@ -1,53 +1,9 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
+#include "file.h"
 
-#define max_food 5
-
-char kind_str[5][7] = { "Meat", "Dairy", "Fruit", "Bread", "Sweets" };
-
-typedef struct Food {
-    char *name;
-    int expiration_date[3];
-    int num;
-}Food;
-
-typedef struct Foods {
-    int Foodnum, capacity;
-    Food* pfood;
-}Foods;
-
-void add_food(Foods* pfoods, int* food_num) {
-    /*** Your Code Here ***/
-    printf("add food\n"); // delete
-}
-
-void show_food(Foods* pfoods, int food_number) {
-    /*** Your Code Here ***/
-    printf("show food\n"); // delete
-}
-
-void show_expired_food(Foods* pfoods, int food_number, int date[]) {
-    /*** Your Code Here ***/
-    printf("show expired food\n"); // delete
-}
-
-void change_food_num(Foods* pfoods, int* food_number) {
-    /*** Your Code Here ***/
-    printf("change_food_num\n"); // delete
-}
-
-void load_food_data(Foods* pfoods, int* food_number, char* filename){
-    /*** Your Code Here ***/
-    printf("load_food_data\n"); // delete
-}
-
-void save_food_data(Foods* pfoods, int food_number){
-    /*** Your Code Here ***/
-    printf("save_food_data\n"); // delete
-}
-
-void main() {
+void main(int argc, char** argv) {
     int choice; // 유저가 선택한 메뉴
     int food_num = 0; // 현재 식재료 개수
     int date[3] = { 2020, 3, 15 }; // 오늘 날짜
@@ -57,7 +13,6 @@ void main() {
         foods[i].capacity = 2;
         foods[i].Foodnum = 0;
     }
-
     if (argc > 1) // 이전 data 불러오기
         load_food_data(foods, &food_num, argv[1]);
 
